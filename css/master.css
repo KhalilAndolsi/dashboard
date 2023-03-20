@@ -1,0 +1,347 @@
+/* ======== global ========*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+*:focus {
+  outline: none;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* //==========// */
+/* ======== style ========*/
+
+.page {
+  background-color:  #eee;
+  min-height: 100vh;
+}
+.part {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.title h4 {
+  font-size: 30px;
+  position: relative;
+  color: #111;
+  width: fit-content;
+}
+.title h4::before {
+  content: "";
+  position: absolute;
+  background-color: #111;
+  width: 90%;
+  height: 3px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.title h4::after {
+  content: "";
+  position: absolute;
+  background-color: #111;
+  width: 10px;
+  height: 10px;
+  bottom: -10px;
+  left: 50%;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+}
+
+/* sidebar */
+.sidebar {
+  z-index: 999;
+  width: 200px;
+  box-shadow: 0 0 10px #bbb;
+}
+.sidebar .btnhide {
+  position: absolute;
+  display: none;
+  top: calc(65px / 2 - 20px);
+  right: 0;
+  transform: translateX(100%);
+  z-index: 999;
+  background-color: #fff;
+  border-radius: 0 12px 12px 0;
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  cursor: pointer;
+}
+.sidebar > h3 {
+  position: relative;
+  margin-bottom: 100px;
+  user-select: none;
+}
+.sidebar > h3::before {
+  content: "";
+  position: absolute;
+  background-color: #111;
+  width: 80%;
+  height: 3px;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sidebar > h3::after {
+  content: "";
+  position: absolute;
+  background-color: #111;
+  width: 15px;
+  height: 15px;
+  bottom: -20px;
+  left: 50%;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.sidebar ul li div {
+  transition: 0.3s;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.sidebar ul li div:hover,
+.sidebar ul li div.active {
+  background-color: #ededed;
+}
+.sidebar ul li div span {
+  font-size: 14px;
+  margin-left: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    position: absolute !important;
+    left: -200px;
+    top: 0;
+    transform: translateX(0);
+    z-index: 999;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .sidebar.nohide {
+    transform: translateX(100%);
+  }
+  .sidebar .btnhide {
+    display: block;
+  }
+}
+/* ======== //sidebar// ======== */
+
+/* ======== header ======== */
+.header {
+  padding-left: 80px !important;
+  box-shadow: 0 0 10px #bbb;
+}
+.header .left-header {
+  display: flex;
+  width: fit-content;
+}
+.header .left-header input {
+  border: 1px solid #111;
+  border-radius: 6px 0 0 6px ;
+  height: 30px;
+  padding: 0 15px;
+  font-weight: 500;
+  font-size: 17px;
+  width: calc(100% - 20px);
+}
+
+.header .left-header button {
+  outline: none;
+  border: 1px solid #111;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #fff;
+  color: #111;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header .left-header button:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.header .right-header {
+  gap: 20px;
+}
+.header .right-header i {
+  cursor: pointer;
+}
+.header .right-header img {
+  height: 40px;
+  border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding-left: 40px !important;
+    gap: 5%;
+  }
+  .header .left-header input {
+    margin-right: 5px;
+    padding-right: 0;
+    border: 0px solid #111;
+    border-right: none;
+    outline: 1px solid #111;
+    border-radius: 0 6px 6px 0;
+  }
+  .header .left-header button {
+    border: 0px solid #111;
+    margin-left: 5px;
+    outline: 1px solid #111;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    order: -1;
+  }
+}
+/* ======== //header// ======== */
+
+/* ======== dashboard ======== */
+.dashboard .cards {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.dashboard .cards .card {
+  background-color: #111;
+  color: #fff;
+  border-radius: 8px;
+  height: 150px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.dashboard .cards .card:hover {
+  opacity: 0.9;
+}
+
+.dashboard .cards .card span:not(.nb) {
+  padding-left: 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.dashboard .cards .card .nb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 15px;
+  font-size: 25px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 55%;
+  transform: translateY(-50%);
+}
+.dashboard .cards .card div {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  background-color: #555;
+  width: 100%;
+}
+/* ======== //dashboard// ======== */
+
+/* ======== manage users ======== */
+table {
+  width: calc(100% - 30px);
+  margin: 15px;
+  text-align: center;
+}
+table tr {
+  color: #111;
+  font-size: 17px;
+  position: relative;
+}
+table tr td:first-of-type {
+  font-weight: 700;
+}
+table tr td a {
+  color: #111;
+}
+table tr th {
+  margin: 0;
+  padding: 10px;
+}
+table tr td {
+  padding: 10px;
+  margin: 0;
+  color: #111;
+}
+table tr::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #555;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+table tr td button {
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #111;
+  padding: 5px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+table .edit:hover {
+  background-color: #2279eb;
+  color: #fff;
+}
+table .delete:hover {
+  background-color: #eb3a22;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  table {
+    width: calc(100% - 10px);
+    margin: 5px;
+  }
+  table tr td button span {
+    display: none;
+  }
+  table tr {
+    font-size: 14px;
+  }
+  table tr th {
+    padding: 5px;
+  }
+  table tr td {
+    padding: 5px;
+    line-height: 0;
+  }
+}
+/* ======== //manage users// ======== */

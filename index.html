@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="stylesheet" href="css/myFrameWork.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="page d-flex">
+      <div class="sidebar bg-white p-20 p-relative">
+        <i class="fa-solid fa-bars-staggered fa-fw btnhide"></i>
+        <h3 class="text-c">ERROR<i class="fa-solid fa-code"></i></h3>
+        <ul>
+          <!-- ====================================== -->
+          <li>
+            <div
+              class="active d-flex align-center fs-14 c-black rad-6 p-10 link"
+              data-page="Dashboard"
+            >
+              <i class="fa-solid fa-chart-pie fa-fw"></i>
+              <span>Dashboard</span>
+            </div>
+          </li>
+          <!-- ====================================== -->
+          <li>
+            <div
+              class="d-flex align-center fs-14 c-black rad-6 p-10 link"
+              data-page="Users"
+            >
+              <i class="fa-solid fa-users fa-fw"></i>
+              <span>Users</span>
+            </div>
+          </li>
+          <li>
+            <div
+              class="d-flex align-center fs-14 c-black rad-6 p-10 link"
+              data-page="Settings"
+            >
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Settings</span>
+            </div>
+          </li>
+          <!-- ====================================== -->
+          <li>
+            <div class="d-flex align-center fs-14 c-black rad-6 p-10">
+              <i class="fa-solid fa-right-from-bracket fa-fw"></i>
+              <span>Signout</span>
+            </div>
+          </li>
+          <!-- ====================================== -->
+        </ul>
+      </div>
+      <div class="content w-full">
+        <!-- ======== header ======== -->
+        <div class="header between-flex p-10 bg-white">
+          <div class="left-header">
+            <input type="text" name="search" placeholder="Search" />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass fa-fw"></i>
+            </button>
+          </div>
+          <div class="right-header center-flex">
+            <i class="fa-regular fa-bell fa-lg"></i>
+            <a href=""><img src="img/pdp.jpg" alt="" /></a>
+          </div>
+        </div>
+        <!-- ========// header //======== -->
+
+        <!-- ======== dashboard ======== -->
+        <div class="dashboard show part" id="Dashboard">
+          <div class="title p-20">
+            <h4>Dashboard</h4>
+          </div>
+          <div class="cards">
+            <!-- =============== -->
+            <div class="card">
+              <span><i class="fa-solid fa-users"></i>Manage Users</span>
+              <span class="nb">123</span>
+              <div>
+                <u>view details</u>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+            <!-- =============== -->
+            <div class="card">
+              <span><i class="fa-solid fa-user-plus"></i>New users to day</span>
+              <span class="nb">2</span>
+              <div>
+                <u>view details</u>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+            <!-- =============== -->
+            <div class="card">
+              <span
+                ><i class="fa-solid fa-calendar-week"></i>Registered users last
+                7 day</span
+              >
+              <span class="nb">32</span>
+              <div>
+                <u>view details</u>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+            <!-- =============== -->
+            <div class="card">
+              <span
+                ><i class="fa-solid fa-calendar-days"></i>Registered users last
+                30 day</span
+              >
+              <span class="nb">54</span>
+              <div>
+                <u>view details</u>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+            <!-- =============== -->
+          </div>
+        </div>
+        <!-- ========// dashboard //======== -->
+
+        <!-- ======== users ======== -->
+        <div class="users part" id="Users">
+          <div class="title p-20">
+            <h4>Manage Users</h4>
+          </div>
+          <table>
+            <!-- table height-->
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>controls</th>
+            </tr>
+            <!-- ========== rows ========== -->
+            <!-- ========================== -->
+            <tr>
+              <!-- id -->
+              <td>1</td>
+              <!-- name -->
+              <td><a href="">racari</a></td>
+              <!-- gmail -->
+              
+              <td><a href="mailto:racari5598@kaudat.com">racari5598@kaudat.com</a></td>
+              <!-- ////buttons//// -->
+              <td>
+                <a href=""><button class="edit"><i class="fa-solid fa-pen-to-square fa-fw"></i><span>Edit</span></button></a>
+                <a href=""><button class="delete"><i class="fa-regular fa-trash-can fa-fw"></i><span>Delete</span></button></a>
+              </td>
+            </tr>
+            <!-- ========================== -->
+            <tr>
+              <!-- id -->
+              <td>2</td>
+              <!-- name -->
+              <td><a href="">cakavan</a></td>
+              <!-- gmail -->
+              
+              <td><a href="mailto:cakavan529@loongwin.com">cakavan529@loongwin.com</a></td>
+              <!-- ////buttons//// -->
+              <td>
+                <a href=""><button class="edit"><i class="fa-solid fa-pen-to-square fa-fw"></i><span>Edit</span></button></a>
+                <a href=""><button class="delete"><i class="fa-regular fa-trash-can fa-fw"></i><span>Delete</span></button></a>
+              </td>
+            </tr>
+            <!-- ========================== -->
+            <tr>
+              <!-- id -->
+              <td>3</td>
+              <!-- name -->
+              <td><a href="">kardgo</a></td>
+              <!-- gmail -->
+              
+              <td><a href="mailto:kardgo1204@loongwin.com">cakavan529@loongwin.com</a></td>
+              <!-- ////buttons//// -->
+              <td>
+                <a href=""><button class="edit"><i class="fa-solid fa-pen-to-square fa-fw"></i><span>Edit</span></button></a>
+                <a href=""><button class="delete"><i class="fa-regular fa-trash-can fa-fw"></i><span>Delete</span></button></a>
+              </td>
+            </tr>
+            <!-- ========================== -->
+          </table>
+        </div>
+        <!-- ========// users //======== -->
+
+        <!-- ======== settings ======== -->
+        <div class="settings part" id="Settings">
+          <div class="title p-20">
+            <h4>settings</h4>
+          </div>
+        </div>
+        <!-- ========// settings //======== -->
+      </div>
+    </div>
+  </body>
+  <script src="script/main.js"></script>
+</html>

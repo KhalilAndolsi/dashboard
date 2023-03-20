@@ -1,0 +1,68 @@
+/* ======== box ========*/
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.w-full {
+  width: 100%;
+}
+/* ======== //box// ========*/
+
+/* ======== position ========*/
+.p-relative {
+  position: relative;
+}
+/* ======== //position// ========*/
+
+/* ======== padding + margin ========*/
+.p-10 {
+  padding: 10px;
+}
+.p-20 {
+  padding: 20px;
+}
+.m-20 {
+  margin: 20px;
+}
+
+/* ======== //padding + margin// ========*/
+
+/* ======== color ========*/
+.bg-white {
+  background-color: white;
+}
+.c-black {
+  color: #111;
+}
+/* ======== //color// ========*/
+
+/* ======== text ========*/
+.text-c {
+  text-align: center;
+}
+.fs-14 {
+  padding: 14px;
+}
+/* ======== //text// ========*/
+
+/* ======== border ========*/
+.rad-6 {
+  border-radius: 6px;
+}
+/* ======== //border// ========*/
+
+/* ======== component ========*/
+.between-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ======== //component// ========*/
+
